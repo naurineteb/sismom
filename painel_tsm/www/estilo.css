@@ -1,7 +1,7 @@
 :root {
   --cor-fundo-app: #F8F4ED;
 
-  --cor-azul-900: #0F3131;
+  --cor-azul-900: #cf1313;
   --cor-azul-800: #123F4A;
   --cor-azul-700: #16566B;
   --cor-azul-600: #1E6F8C;
@@ -18,8 +18,8 @@
   --fonte-principal: "Rawline", Arial, sans-serif;
 
   /* Medidas globais */
-  --largura-pagina: 1800px;
-  --largura-pagina-menor: 1500px;
+  --largura-pagina: 1500px;
+  --largura-pagina-menor: 1200px;
 }
 
 body {
@@ -40,24 +40,24 @@ body {
   color: white;
   padding: 18px 28px;
   border-bottom: 6px solid var(--cor-azul-400);
-  height: 200px;
+  height: 140px;
 }
 
 .topo h1 {
-  font-size: 48px;
+  font-size: 30px;
   margin: 0;
   font-weight: 600;
 }
 
 .topo h2 {
-  font-size: 36px;
+  font-size: 24px;
   margin: 0;
   font-weight: 600;
 }
 
 .topo p {
   margin: 4px 0 0;
-  font-size: 26px;
+  font-size: 18px;
   opacity: 0.9;
 }
 
@@ -74,11 +74,11 @@ body {
   padding: 18px;
   box-shadow: 0 4px 14px rgba(15, 49, 49, 0.12);
   border-left: 6px solid var(--cor-azul-600);
-  max-height: 110px;
+  max-height: 60px;
 }
 
 .titulo-card {
-  font-size: 15px;
+  font-size: 12px;
   color: var(--cor-azul-800);
   font-weight: 700;
   text-transform: uppercase;
@@ -86,7 +86,7 @@ body {
 }
 
 .valor-card {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--cor-azul-700);
 }
@@ -126,9 +126,9 @@ body {
 .mapa-global img{
 
     max-width:100%;
-    max-height:1200px;
+    max-height:800px;
     width:auto;
-    height:800px;
+    height:500px;
 
     object-fit:flex;
 
@@ -138,7 +138,7 @@ body {
 .mapa-sa img{
 
     max-width:100%;
-    max-height:650px;
+    max-height:350px;
     width:auto;
     height:750px;
 
