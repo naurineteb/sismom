@@ -1,7 +1,7 @@
 :root {
   --cor-fundo-app: #F8F4ED;
 
-  --cor-azul-900: #cf1313;
+  --cor-azul-900: #0F3131;
   --cor-azul-800: #123F4A;
   --cor-azul-700: #16566B;
   --cor-azul-600: #1E6F8C;
@@ -71,7 +71,7 @@ body {
 .card-operacional {
   background: white;
   border-radius: 16px;
-  padding: 18px;
+  padding: 12px;
   box-shadow: 0 4px 14px rgba(15, 49, 49, 0.12);
   border-left: 6px solid var(--cor-azul-600);
   max-height: 60px;
@@ -90,12 +90,6 @@ body {
   font-weight: 700;
   color: var(--cor-azul-700);
 }
-
-.painel-filtros {
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(15, 49, 49, 0.12);
-}
-
 
 .mapa-box {
   background: white;
@@ -117,7 +111,7 @@ body {
     display:flex;
     justify-content:center;
     align-items:flex-start;
-    margin-top:-100px;
+    margin-top:-150px;
 }
 
 .mapa-sa{

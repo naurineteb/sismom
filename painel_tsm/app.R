@@ -51,14 +51,12 @@ div(class="page-sazonal",
                 tags$img(
                   id = "mapa_besm",
                   src = "figs/bam_teste_gl.png",
-                  alt = "Mapa BESM") # ,
-                # tags$img(
-                #   id = "mapa_besm",
-                #   src = "figs/bam_teste_tsm.png",
-                #   alt = "Mapa BESM"
-                # ))
-                
-                ),
+                  alt = "Mapa BESM") ,
+                tags$img(
+                  id = "mapa_besm",
+                  src = "figs/bam_teste_tsm.png",
+                  alt = "Mapa BESM"
+                )),
   br(),              
       div(
       class = "mapa-sa",
