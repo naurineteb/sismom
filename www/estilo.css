@@ -18,8 +18,8 @@
   --fonte-principal: "Rawline", Arial, sans-serif;
 
   /* Medidas globais */
-  --largura-pagina: 1800px;
-  --largura-pagina-menor: 1500px;
+  --largura-pagina: 1200px;
+  --largura-pagina-menor: 1000px;
 }
 
 body {
