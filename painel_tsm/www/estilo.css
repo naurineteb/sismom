@@ -47,6 +47,7 @@ body {
     var(--cor-azul-500),
     var(--cor-azul-300),
     var(--cor-azul-100),
+    white
   );
   padding: 18px 28px;
   height: 140px;
@@ -88,10 +89,12 @@ body {
 .card-operacional {
   background: white;
   border-radius: 16px;
-  padding: 12px;
+  padding: 10px;
   box-shadow: 0 4px 14px rgba(15, 49, 49, 0.12);
   border-left: 6px solid var(--cor-azul-600);
   max-height: 60px;
+  margin: 2px;
+
 }
 
 .titulo-card {
@@ -111,9 +114,10 @@ body {
 .mapa-box {
   background: white;
   border-radius: 16px;
-  padding: 16px 32px;
+  padding: 10px 20px 10px 10px;
   box-shadow: 0 4px 14px rgba(15, 49, 49, 0.12);
   overflow: hidden;
+  margin: 1px 10px;
 }
 
 .mapa-box h3 {
@@ -138,7 +142,7 @@ body {
 
 .mapa-tsm img{
     max-width:100%;
-    max-height:350px;
+    max-height:250px;
     width:auto;
     height:350px;
     object-fit:flex;
@@ -155,9 +159,9 @@ body {
 
 .mapa-sa img{
     max-width:100%;
-    max-height:350px;
+    max-height:200px;
     width:auto;
-    height:350px;
+    height:200px;
     object-fit:contain;
     display:block;
 }
