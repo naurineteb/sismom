@@ -80,43 +80,45 @@ div(class="page-sazonal",
 
     div(
       class = "mapa-box",
-      h3("Mapa sazonal BESM"),
-            div( class = "mapa-sup",
-              div( class = "mapa-tsm",
+      h3("Previsão Média Mensal BESM - "),
+              div( class = "mapa-tsm",    
+                  tags$p(class="title-img",style="width:300px","Anomalia mensal Temperatura do ar (°C)"),
                 tags$img(
                   class = "img-zoom",
                   src = "figs/bam_teste_gl2.png",
-                   alt = "Mapa BESM"))#,
-                ),
+                   alt = "Mapa BESM")),
   br(),              
       div(
   class = "mapa-sa",
 
   tags$figure(
     class = "figura-mapa",
+    tags$p(class="title-img","Anomalia mensal \n Precipitação (mm/mês)"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC062026_anomalia_prec_2607.png"
+      src = "figs/IC062026_anomalia_prec_mmmes202607.png"
     ),
     tags$figcaption("Julho de 2026")
   ),
 
   tags$figure(
     class = "figura-mapa",
+    tags$p(class="title-img","Anomalia Percentual \n precipitação (%)"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC062026_anomalia_prec_2608.png"
+      src = "figs/IC062026_anomalia_prec__202607.png"
     ),
-    tags$figcaption("Agosto de 2026")
+    tags$figcaption("Julho de 2026")
   ),
-
+  
   tags$figure(
     class = "figura-mapa",
+    tags$p(class="title-img","Anomalia mensal \n Temperatura do ar (°C)"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC062026_anomalia_prec_2609.png"
+      src = "figs/IC062026_anomalia_T2m_C202607.png"
     ),
-    tags$figcaption("Setembro de 2026")
+    tags$figcaption("Julho de 2026")
   )
 ),
 
