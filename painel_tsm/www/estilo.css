@@ -46,7 +46,7 @@ body {
     var(--cor-azul-700),
     var(--cor-azul-500),
     var(--cor-azul-300),
-    var(--cor-azul-100)
+    var(--cor-azul-100),
   );
   padding: 18px 28px;
   height: 140px;
@@ -138,9 +138,9 @@ body {
 
 .mapa-tsm img{
     max-width:100%;
-    max-height:500px;
+    max-height:350px;
     width:auto;
-    height:500px;
+    height:350px;
     object-fit:flex;
     display:block;
 }
@@ -155,9 +155,9 @@ body {
 
 .mapa-sa img{
     max-width:100%;
-    max-height:450px;
+    max-height:350px;
     width:auto;
-    height:450px;
+    height:350px;
     object-fit:contain;
     display:block;
 }
