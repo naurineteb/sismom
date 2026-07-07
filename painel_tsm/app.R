@@ -12,14 +12,33 @@ ui <- page_fluid(
   ),
   useShinyjs(),
   tags$head(
-    tags$link(rel = "stylesheet", type = "text/css", href = "estilo.css")
+    tags$link(rel = "stylesheet", type = "text/css", href = "estilo.css"),
+tags$script(HTML("
+
+$(document).on('click','.img-zoom',function(){
+
+    let titulo = $(this)
+                    .closest('figure')
+                    .find('figcaption')
+                    .text();
+
+    $('#tituloZoom').text(titulo);
+
+    $('#imgZoom').attr('src',$(this).attr('src'));
+
+    $('#modalZoom').css('display','flex');
+
+});
+
+"))
   ),
 div(class="page-sazonal",
   div(
     class = "topo",
     h1("Brazilian Earth System Model"),
     h2("Dashboard Operacional SisMOM"),
-    p("Julho a dezembro de 2026")
+    p("Julho a dezembro de 2026"),
+    tags$img(src = "icons/sismom_ftransp.png", height = "120px")
   ),
 
   br(),
@@ -47,59 +66,68 @@ div(class="page-sazonal",
     div(
       class = "mapa-box",
       h3("Mapa sazonal BESM"),
-            div( class = "mapa-global",
+            div( class = "mapa-sup",
+              div( class = "mapa-tsm",
                 tags$img(
-                  id = "mapa_besm",
-                  src = "figs/bam_teste_gl.png",
-                  alt = "Mapa BESM") ,
-                tags$img(
-                  id = "mapa_besm",
-                  src = "figs/bam_teste_tsm.png",
-                  alt = "Mapa BESM"
-                )),
+                  class = "img-zoom",
+                  src = "figs/bam_teste_gl2.png",
+                   alt = "Mapa BESM"))#,
+                ),
   br(),              
       div(
-      class = "mapa-sa",
-      tags$img(
-        id = "mapa_besm",
-        src = "figs/bam_teste_tsm.png",
-        alt = "Mapa BESM"
-      ),
-      tags$img(
-        id = "mapa_besm",
-        src = "figs/bam_teste_tsm.png",
-        alt = "Mapa BESM"
-      ),
-      tags$img(
-        id = "mapa_besm",
-        src = "figs/bam_teste_tsm.png",
-        alt = "Mapa BESM"
-      )))))
+  class = "mapa-sa",
+
+  tags$figure(
+    class = "figura-mapa",
+    tags$img(
+      class = "img-zoom",
+      src = "figs/IC062026_anomalia_prec_2607.png"
+    ),
+    tags$figcaption("Julho de 2026")
+  ),
+
+  tags$figure(
+    class = "figura-mapa",
+    tags$img(
+      class = "img-zoom",
+      src = "figs/IC062026_anomalia_prec_2608.png"
+    ),
+    tags$figcaption("Agosto de 2026")
+  ),
+
+  tags$figure(
+    class = "figura-mapa",
+    tags$img(
+      class = "img-zoom",
+      src = "figs/IC062026_anomalia_prec_2609.png"
+    ),
+    tags$figcaption("Setembro de 2026")
+  )
+),
 
 
-server <- function(input, output, session) {
+div(
+    id = "modalZoom",
+    class = "modal-zoom",
+    onclick = "this.style.display='none'",
 
-  observeEvent(input$mes, {
+    tags$span(
+        class = "fechar-zoom",
+        HTML("&times;")
+    ),
 
-    arquivo <- switch(
-      input$mes,
-      "Julho" = "figs/bam_teste_tsm.png",
-      "Agosto" = "figs/bam_teste_tsm3.png",
-      "Setembro" = "figs/bam_teste_tsm2.png",
-      "Outubro" = "figs/bam_teste_tsm4.png",
-      "Novembro" = "figs/bam_teste_tsm.png",
-      "Dezembro" = "figs/bam_teste_tsm2.png",
-      "prec_jul.png"
+    h2(
+        id = "tituloZoom",
+        class = "titulo-zoom"
+    ),
+
+    tags$img(
+        id = "imgZoom",
+        class = "conteudo-zoom"
     )
+))))
 
-    shinyjs::runjs(
-      sprintf(
-        "$('#mapa_besm').attr('src', '%s?v=' + new Date().getTime());",
-        arquivo
-      )
-    )
 
-  }, ignoreInit = FALSE)
-}
+server <- function(input, output, session) { }
 
 shinyApp(ui, server)
