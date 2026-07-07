@@ -34,12 +34,27 @@ $(document).on('click','.img-zoom',function(){
   ),
 div(class="page-sazonal",
   div(
-    class = "topo",
+  class = "topo",
+
+  div(
+    class = "topo-texto",
     h1("Brazilian Earth System Model"),
     h2("Dashboard Operacional SisMOM"),
-    p("Julho a dezembro de 2026"),
-    tags$img(src = "icons/sismom_ftransp.png", height = "120px")
+    p("Julho a dezembro de 2026")
   ),
+
+  div(
+    class = "topo-logo",
+    tags$img(
+      src = "icons/sismom_ftransp.png",
+      height = "120px"
+    ),
+        tags$img(
+      src = "icons/inpe.png",
+      height = "120px"
+    )
+  )
+),
 
   br(),
 
