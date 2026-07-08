@@ -89,38 +89,58 @@ div(class="page-sazonal",
   br(),              
       div(
   class = "mapa-sa",
-
   tags$figure(
     class = "figura-mapa",
-    tags$p(class="title-img","Anomalia mensal \n Precipitação (mm/mês)"),
+    tags$figcaption("Anomalia mensal \n Precipitação (mm/mês) Julho/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC062026_anomalia_prec_mmmes202607.png"
-    ),
-    tags$figcaption("Julho de 2026")
-  ),
+    )),
 
   tags$figure(
     class = "figura-mapa",
-    tags$p(class="title-img","Anomalia Percentual \n precipitação (%)"),
+    tags$figcaption("Anomalia Percentual \n precipitação (%) Julho/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC062026_anomalia_prec__202607.png"
-    ),
-    tags$figcaption("Julho de 2026")
-  ),
+    )),
   
   tags$figure(
     class = "figura-mapa",
-    tags$p(class="title-img","Anomalia mensal \n Temperatura do ar (°C)"),
+    tags$figcaption("Anomalia mensal \n Temperatura do ar (°C) Julho/2026 "),
     tags$img(
       class = "img-zoom",
       src = "figs/IC062026_anomalia_T2m_C202607.png"
-    ),
-    tags$figcaption("Julho de 2026")
-  )
+    ))
 ),
+  br(),
 
+# Dados sazonais                 
+  div(
+      class = "mapa-box",style="display:flex",
+      tags$img(class = "img-zoom",style="height:70px",
+                  src = "figs/bam_teste_gl2.png"),
+  tags$figure(
+    class = "figura-mapa",style="width: 50px",
+    tags$img(
+      class = "img-zoom",
+      src = "figs/IC062026_anomalia_prec_mmmes_JAS2026.png"
+    )),
+
+  tags$figure(
+    class = "figura-mapa",style="width: 50px",
+    tags$img(
+      class = "img-zoom",
+      src = "figs/IC062026_anomalia_prec___JAS2026.png"
+    )),
+  
+  tags$figure(
+    class = "figura-mapa",style="width: 50px",
+    tags$img(
+      class = "img-zoom",
+      src = "figs/IC062026_anomalia_T2m_C_JAS2026.png"
+    ))
+),
 
 div(
     id = "modalZoom",
