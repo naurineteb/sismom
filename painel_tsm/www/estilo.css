@@ -188,6 +188,7 @@ body {
   margin-top: -15px;
   margin-bottom: -10px;
 }
+
 .mapa-sa{
     display:flex;
     justify-content:left;
@@ -266,9 +267,10 @@ body {
 
     margin-top:8px;
 
-    font-size:16px;
+    font-size:12px;
 
     font-weight:600;
+    width: 200px;
 
     color:var(--cor-azul-800);
 }
