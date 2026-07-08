@@ -58,8 +58,7 @@ div(class="page-sazonal",
 
   br(),
 
-  layout_columns(
-    col_widths = c(4,4,4),
+  div(class="cards-columns",
 
     div(class = "card-operacional",
         div(class = "titulo-card", "Previsão"),
@@ -80,7 +79,7 @@ div(class="page-sazonal",
 
     div(
       class = "mapa-box",
-      h3("Previsão Média Mensal BESM - "),
+      h3(style="margin-top: 0","Previsão Média Mensal BESM - Julho/2026"),
               div( class = "mapa-tsm",    
                   tags$p(class="title-img",style="width:300px","Anomalia mensal Temperatura do ar (°C)"),
                 tags$img(
