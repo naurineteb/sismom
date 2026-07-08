@@ -84,7 +84,7 @@ div(class="page-sazonal",
                   tags$p(class="title-img",style="width:300px","Anomalia mensal Temperatura do ar (°C)"),
                 tags$img(
                   class = "img-zoom",
-                  src = "figs/bam_teste_gl2.png",
+                  src = "figs/IC062026_anomalia_TSM_C202607.png",
                    alt = "Mapa BESM")),
   br(),              
       div(
@@ -119,7 +119,7 @@ div(class="page-sazonal",
   div(
       class = "mapa-box",style="display:flex",
       tags$img(class = "img-zoom",style="height:70px",
-                  src = "figs/bam_teste_gl2.png"),
+                  src = "figs/IC062026_anomalia_TSM_C202610.png"),
   tags$figure(
     class = "figura-mapa",style="width: 50px",
     tags$img(
