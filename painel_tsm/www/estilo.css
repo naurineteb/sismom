@@ -49,8 +49,9 @@ body {
     var(--cor-azul-100),
     white
   );
-  padding: 18px 28px;
+  padding: 18px 18px 0px 18px;
   height: 140px;
+  margin-bottom: 0;
 
 }
 
@@ -86,15 +87,31 @@ body {
   margin-right: auto;
 }
 
-.card-operacional {
-  background: white;
-  border-radius: 16px;
-  padding: 10px;
-  box-shadow: 0 4px 14px rgba(15, 49, 49, 0.12);
-  border-left: 6px solid var(--cor-azul-600);
-  max-height: 60px;
-  margin: 2px;
+.cards-columns{
 
+    display:flex;
+
+    gap:15px;
+
+    align-items:stretch;
+    margin-top: -10px ;
+        margin-bottom: -10px ;
+}
+.card-operacional{
+
+    flex:1;
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:10px;
+
+    border-left:6px solid var(--cor-azul-600);
+
+    box-shadow:0 4px 14px rgba(15,49,49,.12);
+
+    min-height:70px;
 }
 
 .titulo-card {
@@ -168,12 +185,14 @@ body {
   align-items:center;
   font-size: 14px;
   padding: 2px 2px 2px 2px;
+  margin-top: -15px;
+  margin-bottom: -10px;
 }
 .mapa-sa{
     display:flex;
-    justify-content:center;
+    justify-content:left;
     align-items:flex-start;
-    margin-top:20px;
+    margin-top:-15px;
     gap: 20px;
 }
 
