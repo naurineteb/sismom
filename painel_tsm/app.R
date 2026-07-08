@@ -116,39 +116,29 @@ div(class="page-sazonal",
   br(),
 
 # Dados sazonais                 
-div(
-  class = "mapa-sa",
-    div(
-      class = "mapa-box",
-      h3(style="margin-top: 0","Previsão Média Mensal BESM - Julho/2026"),
-              div( class = "mapa-tsm",    
-                  tags$p(class="title-img",style="width:300px","Anomalia mensal Temperatura do ar (°C)"),
-                tags$img(
-                  class = "img-zoom",
-                  src = "figs/bam_teste_gl2.png",
-                   alt = "Mapa BESM"))),
+  div(
+      class = "mapa-box",style="display:flex",
+      tags$img(class = "img-zoom",style="height:70px",
+                  src = "figs/bam_teste_gl2.png"),
   tags$figure(
-    class = "figura-mapa",
-    tags$figcaption("Anomalia mensal \n Precipitação (mm/mês) Julho/2026"),
+    class = "figura-mapa",style="width: 50px",
     tags$img(
       class = "img-zoom",
-      src = "figs/IC062026_anomalia_prec_mmmes202607.png"
+      src = "figs/IC062026_anomalia_prec_mmmes_JAS2026.png"
     )),
 
   tags$figure(
-    class = "figura-mapa",
-    tags$figcaption("Anomalia Percentual \n precipitação (%) Julho/2026"),
+    class = "figura-mapa",style="width: 50px",
     tags$img(
       class = "img-zoom",
-      src = "figs/IC062026_anomalia_prec__202607.png"
+      src = "figs/IC062026_anomalia_prec___JAS2026.png"
     )),
   
   tags$figure(
-    class = "figura-mapa",
-    tags$figcaption("Anomalia mensal \n Temperatura do ar (°C) Julho/2026 "),
+    class = "figura-mapa",style="width: 50px",
     tags$img(
       class = "img-zoom",
-      src = "figs/IC062026_anomalia_T2m_C202607.png"
+      src = "figs/IC062026_anomalia_T2m_C_JAS2026.png"
     ))
 ),
 
