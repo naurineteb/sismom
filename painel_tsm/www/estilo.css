@@ -129,7 +129,8 @@ body {
 }
 
 
-.mapa-box {
+.mapa-box-main,
+.mapa-box-sec {
   background: white;
   border-radius: 16px;
   padding: 10px 20px 10px 10px;
@@ -141,44 +142,47 @@ body {
   align-items:center;
 }
 
-.mapa-box h3 {
+.mapa-box-main h3,
+.mapa-box-sec h3 {
   color: var(--cor-azul-800);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   justify-content:center;
   align-items:center;
+  display: flex;
+      font-weight:600;
 }
 
-.mapa-box {
-  padding: 8px 12px;
+.mapa-box-main{
+  padding: 12px 12px;
 }
 
-.bloco-mapas {
-  width: 92%;
-  margin: 0 auto;
+.bloco-mapas{
+  width: 100%;
+  margin: 0;
 }
 
-.map-tsm-main {
+.map-tsm-main{
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .fig-tsm-main {
-  max-width: 100%;
-  height: auto;
-  margin: 0;
-  text-align: left;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:0;
 }
 
 
 .fig-tsm-main img{
     max-width:70%;
     max-height:70%;
-  width: auto;
-  height: auto;
+    width: auto;
+    height: auto;
     object-fit:flex;
-    display:block;
+    display:flex;
     justify-content:center;
     align-items:center;
     margin-top:20px;
@@ -191,45 +195,45 @@ body {
     transform:scale(1.02);
 }
 
-.fig-tsm-main figcaption{
+.fig-tsm-main figcaption,
+.fig-tsm-sec figcaption{
 
     display: block;
-    text-align:left;
-
-    font-size:12px;
+    text-align:center;
+    font-size:18px;
     font-weight:600;
-
     line-height:1.2;
-
     margin-bottom:6px;
-
     white-space:normal;      /* permite quebrar */
     word-wrap:break-word;
     overflow-wrap:break-word;
-        margin-bottom: -20px;
+    margin-bottom: -20px;
 }
 
 
 .map-var-main{
-    display:flex;
-    justify-content:left;
-    align-items:flex-start;
-    margin-top:-15px;
-    gap: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  margin-top: -120px;
 }
 
-
 .fig-var-main{
-    margin:0;
-    text-align:center;
-  width:150px;
+  text-align:center;
+  flex-direction:column;
+  align-items:center;
+  margin:0;
+  gap: 5px 25px 0 0 ;
 }
 
 .fig-var-main img{
-    height: 200px;
-    cursor:zoom-in;
-    transition:.2s;
-    margin-top: -25px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 230px;
+  height: auto;
+  cursor: zoom-in;
+  transition: .2s;
 }
 
 .fig-var-main img:hover{
@@ -238,12 +242,104 @@ body {
 
 .fig-var-main figcaption{
 
-    width: 100%;
-    white-space: normal;
-    overflow-wrap: break-word;
-    line-height: 1.2;
-    font-size: 12px;
-    margin-bottom: -50px;
+    display: block;
+    text-align:center;
+    width: 230px;
+    font-size:14px;
+    font-weight:600;
+    line-height:1.2;
+    margin-bottom:6px;
+    white-space:normal;      /* permite quebrar */
+    word-wrap:break-word;
+    overflow-wrap:break-word;
+}
+
+/* permite quebrar =======================================================*/
+
+.mapas-sec {
+    display:flex;
+
+    justify-content:center;   /* centraliza o conjunto */
+
+    align-items:flex-start;
+
+    gap:20px;                 /* distância entre mapas */
+
+    flex-wrap:nowrap;
+
+    width:fit-content;
+
+    margin:0 auto;
+
+}
+
+.figura-sec-tsm, 
+.figura-sec {
+  margin: 0;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.figura-sec figcaption {
+    display: block;
+    text-align:center;
+    width: 150px;
+    font-size:10px;
+    font-weight:600;
+    line-height:1.2;
+    margin-bottom:6px;
+    white-space:normal;      /* permite quebrar */
+    word-wrap:break-word;
+    overflow-wrap:break-word;
+}
+
+.figura-sec img {
+
+
+    width:auto;
+
+    height:180px;
+
+    display:block;
+
+
+  object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.2s;
+}
+
+.figura-sec-tsm {
+  display: block;
+}
+
+.figura-sec-tsm img{
+  padding-top: -250px;
+    width:auto;
+
+    height:180px;
+
+    display:block;
+}
+
+.figura-sec img:hover {
+  transform: scale(1.02);
+}
+
+.figura-sec-tsm figcaption {
+  width: 100%;
+  min-height: 30px;
+
+    text-align:center;
+    font-size:10px;
+    font-weight:600;
+    line-height:1.2;
+    margin-top: 10px;
+    white-space:normal;      /* permite quebrar */
+    word-wrap:break-word;
+    overflow-wrap:break-word;
 }
 
 
@@ -314,7 +410,7 @@ body {
 
     margin-bottom:20px;
 
-    font-size:30px;
+    font-size:38px;
 
     font-weight:600;
 }
