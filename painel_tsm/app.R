@@ -12,54 +12,41 @@ ui <- page_fluid(
   ),
   useShinyjs(),
   tags$head(
-    tags$link(rel = "stylesheet", type = "text/css", href = "estilo.css"),
-tags$script(HTML("
-
-$(document).on('click','.img-zoom',function(){
-
-    let titulo = $(this)
+    tags$link(rel = "stylesheet", 
+              type = "text/css", 
+              href = "estilo.css"),
+    tags$script(HTML("$(document).on('click','.img-zoom',  
+                function(){let titulo = $(this)
                     .closest('figure')
                     .find('figcaption')
                     .text();
-
     $('#tituloZoom').text(titulo);
-
     $('#imgZoom').attr('src',$(this).attr('src'));
+    $('#modalZoom').css('display','flex');});"
+  ))),
+  
+  div(class="page-sazonal",
+    div(class = "topo",
+  
+      div(class = "topo-texto",
+        h1("Brazilian Earth System Model"),
+        h2("Dashboard Operacional SisMOM"),
+        p("Julho a dezembro de 2026")
+      ),
 
-    $('#modalZoom').css('display','flex');
-
-});
-
-"))
-  ),
-div(class="page-sazonal",
-  div(
-  class = "topo",
-
-  div(
-    class = "topo-texto",
-    h1("Brazilian Earth System Model"),
-    h2("Dashboard Operacional SisMOM"),
-    p("Julho a dezembro de 2026")
-  ),
-
-  div(
-    class = "topo-logo",
-    tags$img(
-      src = "icons/sismom_ftransp.png",
-      height = "120px"
-    ),
+      div(class = "topo-logo",
         tags$img(
-      src = "icons/inpe.png",
-      height = "120px"
-    )
-  )
-),
+          src = "icons/sismom_ftransp.png",
+          height = "120px"),
+        tags$img(
+          src = "icons/inpe.png",
+          height = "120px")
+      )
+    ),
 
   br(),
 
   div(class="cards-columns",
-
     div(class = "card-operacional",
         div(class = "titulo-card", "Previsão"),
         div(class = "valor-card", "Sazonal")
@@ -77,10 +64,9 @@ div(class="page-sazonal",
   ),
   br(),
 
-    div(class = "mapa-box",
-      h3("Previsão Média Mensal BESM - Julho/2026"),
-        div(
-    class = "bloco-mapas",
+    div(class = "mapa-box-main",
+      h3("Previsão Mensal BESM - Julho/2026"),
+        div(class = "bloco-mapas",
       # Figura TSM
       div( class = "map-tsm-main",
         tags$figure(
@@ -118,35 +104,54 @@ div(class="page-sazonal",
       class = "img-zoom",
       src = "figs/IC062026_anomalia_T2m_C202607.png"
     ))
-)),
+))),
   br(),
 
-# Dados sazonais                 
+# Dados sazonais            
+
+    div(class = "mapa-box-main",
+      h3("Previsão Sazonal BESM - JAS/2026"),
+        div(class = "bloco-mapas",     
   div(
-      class = "mapa-box",style="display:flex",
-      tags$img(class = "img-zoom",style="height:70px",
-                  src = "figs/IC062026_anomalia_TSM_C202610.png"),
+  class = "mapas-sec",
+
   tags$figure(
-    class = "figura-mapa",style="width: 50px",
+    class = "figura-sec-tsm",
+    tags$figcaption("Anomalia sazonal Temperatura da Superfície do Mar (°C)(***)"),
+    tags$img(
+      class = "img-zoom",
+      src = "figs/IC062026_anomalia_TSM_C202608.png"
+    )
+  ),
+
+  tags$figure(
+    class = "figura-sec",
+    tags$figcaption("Anomalia mensal Precipitação (mm) Jul/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC062026_anomalia_prec_mmmes_JAS2026.png"
-    )),
+    )
+  ),
 
   tags$figure(
-    class = "figura-mapa",style="width: 50px",
+    class = "figura-sec",
+    tags$figcaption("Anomalia percentual Precipitação (%) Jul/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC062026_anomalia_prec___JAS2026.png"
-    )),
-  
+    )
+  ),
+
   tags$figure(
-    class = "figura-mapa",style="width: 50px",
+    class = "figura-sec",
+    tags$figcaption("Anomalia mensal Temp. do ar (°C) Jul/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC062026_anomalia_T2m_C_JAS2026.png"
-    ))
-),
+    )
+  )
+)
+))),
 
 div(
     id = "modalZoom",
@@ -167,7 +172,7 @@ div(
         id = "imgZoom",
         class = "conteudo-zoom"
     )
-))))
+))
 
 
 server <- function(input, output, session) { }
