@@ -25,7 +25,7 @@ ui <- page_fluid(
     $('#modalZoom').css('display','flex');});"
   ))),
   
-  div(class="page-sazonal",
+  div( class="page-sazonal",
     div(class = "topo",
   
       div(class = "topo-texto",
@@ -64,9 +64,9 @@ ui <- page_fluid(
   ),
   br(),
 
-    div(class = "mapa-box-main",
+    div( class = "mapa-box-main",
       h3("Previsão Mensal BESM - Julho/2026"),
-        div(class = "bloco-mapas",
+        div( class = "bloco-mapas",
       # Figura TSM
       div( class = "map-tsm-main",
         tags$figure(
@@ -109,7 +109,7 @@ ui <- page_fluid(
 
 # Dados sazonais            
 
-    div(class = "mapa-box-main",
+    div( class = "mapa-box-main",
       h3("Previsão Sazonal BESM - JAS/2026"),
         div(class = "bloco-mapas",     
   div(
@@ -151,13 +151,13 @@ ui <- page_fluid(
     )
   )
 )
-))),
+)),
 
   br(),
 
-    div(class = "mapa-box-main",
+    div( class = "mapa-box-main",
       h3("Previsão Mensal BESM - Agosto/2026"),
-        div(class = "bloco-mapas",
+        div( class = "bloco-mapas",
       # Figura TSM
       div( class = "map-tsm-main",
         tags$figure(
@@ -334,7 +334,7 @@ ui <- page_fluid(
   )
 )
 )),
-
+    br(),     
     div(class = "mapa-box-main",
       h3("Previsão Mensal BESM - Outubro/2026"),
         div(class = "bloco-mapas",
@@ -418,7 +418,7 @@ ui <- page_fluid(
       class = "img-zoom",
       src = "figs/IC062026_anomalia_T2m_C202611.png"
     ))
-))),
+)))),
   br(),
 
 div(
