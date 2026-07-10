@@ -77,20 +77,26 @@ div(class="page-sazonal",
   ),
   br(),
 
+    div(class = "mapa-box",
+      h3("Previsão Média Mensal BESM - Julho/2026"),
+        div(
+    class = "bloco-mapas",
+      # Figura TSM
+      div( class = "map-tsm-main",
+        tags$figure(
+        class = "fig-tsm-main",    
+          tags$figcaption("Anomalia mensal Temperatura da Superfície do Mar (°C)"),
+          tags$img(
+            class = "img-zoom",
+            src = "figs/IC062026_anomalia_TSM_C202607.png"))
+      ),
+    
+    br(),              
+    
     div(
-      class = "mapa-box",
-      h3(style="margin-top: 0","Previsão Média Mensal BESM - Julho/2026"),
-              div( class = "mapa-tsm",    
-                  tags$p(class="title-img",style="width:300px","Anomalia mensal Temperatura do ar (°C)"),
-                tags$img(
-                  class = "img-zoom",
-                  src = "figs/IC062026_anomalia_TSM_C202607.png",
-                   alt = "Mapa BESM")),
-  br(),              
-      div(
-  class = "mapa-sa",
+  class = "map-var-main",
   tags$figure(
-    class = "figura-mapa",
+    class = "fig-var-main",
     tags$figcaption("Anomalia mensal \n Precipitação (mm/mês) Julho/2026"),
     tags$img(
       class = "img-zoom",
@@ -98,7 +104,7 @@ div(class="page-sazonal",
     )),
 
   tags$figure(
-    class = "figura-mapa",
+    class = "fig-var-main",
     tags$figcaption("Anomalia Percentual \n precipitação (%) Julho/2026"),
     tags$img(
       class = "img-zoom",
@@ -106,13 +112,13 @@ div(class="page-sazonal",
     )),
   
   tags$figure(
-    class = "figura-mapa",
+    class = "fig-var-main",
     tags$figcaption("Anomalia mensal \n Temperatura do ar (°C) Julho/2026 "),
     tags$img(
       class = "img-zoom",
       src = "figs/IC062026_anomalia_T2m_C202607.png"
     ))
-),
+)),
   br(),
 
 # Dados sazonais                 
