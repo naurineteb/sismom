@@ -441,7 +441,7 @@ body {
    12.9. RESPONSIVIDADE 
 ===================================================== */
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
 
   .topo{
   height: calc(40% - 20px);
