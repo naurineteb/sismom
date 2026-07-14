@@ -2,11 +2,6 @@ library(shiny)
 library(bslib)
 library(shinyjs)
 
-yyyy = 2026
-mm = 8
-mes= "Agosto"
-loc_dir="IC072026"
-
 ui <- page_fluid(
   theme = bs_theme(
     version = 5,
@@ -59,18 +54,18 @@ ui <- page_fluid(
 
     div(class = "card-operacional",
         div(class = "titulo-card", "Rodada"),
-        div(class = "valor-card", "Jul/2026")
+        div(class = "valor-card", "Jun/2026")
     ),
 
     div(class = "card-operacional",
         div(class = "titulo-card", "Período"),
-        div(class = "valor-card", "agosto a dezembro 2026")
+        div(class = "valor-card", "julho a novembro 2026")
     )
   ),
   br(),
 
     div( class = "mapa-box-main",
-      h3("Previsão Mensal BESM - Agosto/2026"),
+      h3("Previsão Mensal BESM - Julho/2026"),
         div( class = "bloco-mapas",
       # Figura TSM
       div( class = "map-tsm-main",
@@ -79,7 +74,7 @@ ui <- page_fluid(
           tags$figcaption("Anomalia mensal Temperatura da Superfície do Mar (°C)"),
           tags$img(
             class = "img-zoom",
-            src = paste0("figs/",loc_dir,"/tsm/",loc_dir,"_anomalia_TSM_",yyyy,formatC(mm[1], width=2,flag=0),".png")))
+            src = "figs/IC062026_anomalia_TSM_C202607.png"))
       ),
     
     br(),              
@@ -88,26 +83,26 @@ ui <- page_fluid(
   class = "map-var-main",
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption(paste0("Anomalia mensal \n Precipitação (mm/mês) ",mes[1],"/2026")),
+    tags$figcaption("Anomalia mensal \n Precipitação (mm/mês) Julho/2026"),
     tags$img(
       class = "img-zoom",
-      src = paste0("figs/",loc_dir,"/prec/",loc_dir,"_anomalia_prec_mmmes",yyyy,formatC(mm[1], width=2,flag=0),".png")
+      src = "figs/IC062026_anomalia_prec_mmmes202607.png"
     )),
 
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption(paste0("Anomalia Percentual mensal \n Precipitação (%) ",mes[1],"/2026"),
+    tags$figcaption("Anomalia Percentual \n precipitação (%) Julho/2026"),
     tags$img(
       class = "img-zoom",
-      src = paste0("figs/",loc_dir,"/prec/",loc_dir,"_anomalia_prec__",yyyy,formatC(mm[1], width=2,flag=0),".png")
+      src = "figs/IC062026_anomalia_prec__202607.png"
     )),
   
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption(paste0("Anomalia mensal \n Temperatura do ar (°C) ",mes[1],"/2026"),
+    tags$figcaption("Anomalia mensal \n Temperatura do ar (°C) julho Agosto/2026 "),
     tags$img(
       class = "img-zoom",
-      src = paste0("figs/",loc_dir,"/t2m/",loc_dir,"_anomalia_T2m_C",yyyy,formatC(mm[1], width=2,flag=0),".png")
+      src = "figs/IC062026_anomalia_T2m_C202607.png"
     ))
 ))),
   br(),
@@ -179,10 +174,10 @@ ui <- page_fluid(
   class = "map-var-main",
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption(paste0("Anomalia mensal \n Precipitação (mm/mês)",mes[1],"/2026")),
+    tags$figcaption("Anomalia mensal \n Precipitação (mm/mês) Agosto/2026"),
     tags$img(
       class = "img-zoom",
-      src = ""
+      src = "figs/IC062026_anomalia_prec_mmmes202608.png"
     )),
 
   tags$figure(
@@ -445,7 +440,7 @@ div(
         id = "imgZoom",
         class = "conteudo-zoom"
     )
-))))
+))
 
 
 server <- function(input, output, session) { }
