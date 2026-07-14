@@ -95,7 +95,7 @@ body {
 
     align-items:stretch;
     margin-top: -10px ;
-        margin-bottom: -10px ;
+    margin-bottom: -10px ;
 }
 .card-operacional{
 
@@ -112,6 +112,8 @@ body {
     box-shadow:0 4px 14px rgba(15,49,49,.12);
 
     min-height:70px;
+
+
 }
 
 .titulo-card {
@@ -223,14 +225,14 @@ body {
   text-align:center;
   flex-direction:column;
   align-items:center;
-  margin:0;
+  margin-top:60px;
   gap: 3px 3px 0 0 ;
 }
 
 .fig-var-main img{
   max-width: 100%;
   max-height: 100%;
-  width: 150px;
+  width: 310px;
   height: auto;
   cursor: zoom-in;
   transition: .2s;
@@ -244,8 +246,8 @@ body {
 
     display: block;
     text-align:center;
-    width: 150px;
-    font-size:11px;
+    width: 310px;
+    font-size:18px;
     font-weight:600;
     line-height:1.1;
     margin-bottom:3px;
@@ -424,3 +426,134 @@ body {
 
     border-radius:8px;
 }
+
+/* Container principal */
+.bloco-mapas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+
+
+/* =====================================================
+   12.9. RESPONSIVIDADE 
+===================================================== */
+
+@media (max-width: 300px) {
+
+  .topo{
+  height: calc(40% - 20px);
+  padding: auto;
+  max-height: 100px;
+  margin-bottom: 0;
+
+  }
+.topo-texto {
+    display: flex;
+    flex-direction: column; /* Isso coloca um embaixo do outro */
+    align-items: flex-start; /* Alinha os textos à esquerda */
+    gap: 1px;            /* Espaço entre os elementos */
+    width: 100%;          /* Aumenta a largura para caber tudo */
+    white-space: nowrap;  /* Impede que o texto quebre dentro dos elementos */
+}
+
+.topo-texto h1, 
+.topo-texto h2, 
+.topo-texto p {
+    margin: 1px;            /* Remove as margens que criam espaços verticais */
+    display: flex;      /* Garante que se comportem como texto corrido */
+    font-size: 0.55rem;
+    padding: 1px;
+}
+  
+  .topo-logo img{
+    width:50%;
+    height: auto;
+  }
+.card-operacional {
+    min-height: 30px;    /* O padrão atual é 70px */
+    padding-top: 2px;    /* O padrão atual é 10px */
+    padding-bottom: 2px; /* O padrão atual é 10px */
+    height: auto;        /* Garante que a altura se ajuste ao conteúdo */
+    border-radius:10px;
+    
+    border-left:3px solid var(--cor-azul-600);
+}
+
+  .valor-card{
+    font-size: 5px;
+    align-items: center;
+  }
+  .titulo-card{
+    font-size: 5px;
+  }
+
+  
+.mapa-box-main h3 {
+    font-size: calc(0.4rem + .2vw);
+}
+
+figure.fig-tsm-main {
+    width: 250px; 
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.fig-tsm-main figcaption
+{
+  font-size: calc(0.2rem + .2vw);
+}
+
+.fig-var-main figcaption
+{
+  font-size: calc(0.2rem + .2vw);
+  margin-bottom: 2px;
+  width: 50px;
+}
+
+.fig-var-main {
+  width: 55px;
+}
+
+.fig-var-main img{
+  width: 50px;
+}
+img.img-zoom {
+    width: 100%;
+    height: auto;
+}
+
+figure.figura-sec-tsm {
+    width: 100px; 
+    height: 100%;
+    margin-top: -12px;
+    gap: 5px;
+}
+
+.figura-sec-tsm figcaption
+{
+  font-size: calc(0.1rem + .1vw);
+  margin-bottom: -25px;
+}
+
+figure.figura-sec {
+    width: 30px; 
+    height: 100%;
+}
+.figura-sec figcaption{
+  font-size: calc(0.1rem + .1vw);
+  margin-bottom: 2px;
+  width: 30px;
+}
+.titulo-zoom{
+
+
+
+    font-size:calc(0.8rem + .3vw);
+
+}
+
+}
+
