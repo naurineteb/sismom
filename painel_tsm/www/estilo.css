@@ -216,7 +216,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 8px;
-  margin-top: -75px;
+  margin-top: -65px;
 }
 
 .fig-var-main{
@@ -224,13 +224,13 @@ body {
   flex-direction:column;
   align-items:center;
   margin:0;
-  gap: 3px 3px 0 0 ;
+  gap: 1px 1px 0 0 ;
 }
 
 .fig-var-main img{
   max-width: 100%;
   max-height: 100%;
-  width: 150px;
+  width: 100px;
   height: auto;
   cursor: zoom-in;
   transition: .2s;
@@ -244,8 +244,8 @@ body {
 
     display: block;
     text-align:center;
-    width: 150px;
-    font-size:11px;
+    width: 100px;
+    font-size:10px;
     font-weight:600;
     line-height:1.1;
     margin-bottom:3px;
