@@ -29,18 +29,16 @@ ui <- page_fluid(
     div(class = "topo",
   
       div(class = "topo-texto",
-        h1("Brazilian Earth System Model"),
-        h2("Dashboard Operacional SisMOM"),
-        p("Julho a dezembro de 2026")
+        h1("Sistema de Monitoramento de Óleo no Mar - SisMOM"),
+        h2("Brazilian Earth System Model - BESM"),
+        h3("Dashboard Temporário da Sala de Situação")
       ),
 
       div(class = "topo-logo",
         tags$img(
-          src = "icons/sismom_ftransp.png",
-          height = "120px"),
+          src = "icons/sismom_ftransp.png"),
         tags$img(
-          src = "icons/inpe.png",
-          height = "120px")
+          src = "icons/inpe.png")
       )
     ),
 
@@ -68,23 +66,19 @@ ui <- page_fluid(
       h3("Previsão Mensal BESM - Agosto/2026"),
         div( class = "bloco-mapas",
       # Figura TSM
-#      div( class = "map-tsm-main",
-        tags$figure(
+      tags$figure(
         class = "fig-tsm-main",    
-          tags$figcaption("Anomalia mensal Temperatura da Superfície do Mar (°C)"),
+          tags$figcaption("Anomalia temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
-            src = "figs/IC072026_anomalia_TSM_202608.png"))
-#      )
-      ,
-    
+            src = "figs/IC072026_anomalia_TSM_202608.png")),
     br(),              
     
     div(
   class = "map-var-main",
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia mensal \n Precipitação (mm/mês) Agosto/2026"),
+    tags$figcaption("Anomalia \n precipitação (mm/mês) Agosto/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_prec_mmmes202608.png"
@@ -92,7 +86,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia Percentual \n precipitação (%) Agosto/2026"),
+    tags$figcaption("Anomalia percentual \n precipitação (%) Agosto/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_prec__202608.png"
@@ -100,7 +94,7 @@ ui <- page_fluid(
   
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia mensal \n Temperatura do ar (°C)  Agosto/2026 "),
+    tags$figcaption("Anomalia temperatura do ar (°C)  Agosto/2026 "),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_T2m_C202608.png"
@@ -111,14 +105,14 @@ ui <- page_fluid(
 # Dados sazonais            
 
     div( class = "mapa-box-main",
-      h3("Previsão Sazonal BESM - ASO/2026"),
+      h3("Previsão Trimestral BESM - ASO/2026"),
         div(class = "bloco-mapas",     
   div(
   class = "mapas-sec",
 
   tags$figure(
     class = "figura-sec-tsm",
-    tags$figcaption("Anomalia sazonal Temperatura da Superfície do Mar (°C)(***)"),
+    tags$figcaption("Anomalia temperatura da superfície do mar (°C)(***)"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_TSM_202609.png"
@@ -127,7 +121,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "figura-sec",
-    tags$figcaption("Anomalia mensal Precipitação (mm) ASO/2026"),
+    tags$figcaption("Anomalia precipitação (mm/mês) ASO/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomprec_mediaASO2026.png"
@@ -136,7 +130,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "figura-sec",
-    tags$figcaption("Anomalia percentual Precipitação (%) ASO/2026"),
+    tags$figcaption("Anomalia percentual precipitação (%) ASO/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomprec___ASO2026.png"
@@ -145,7 +139,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "figura-sec",
-    tags$figcaption("Anomalia mensal Temp. do ar (°C) ASO/2026"),
+    tags$figcaption("Anomalia temperatura do ar (°C) ASO/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_T2m_C_ASO2026.png"
@@ -162,19 +156,16 @@ ui <- page_fluid(
       # Figura TSM
         tags$figure(
         class = "fig-tsm-main",    
-          tags$figcaption("Anomalia mensal Temperatura da Superfície do Mar (°C)"),
+          tags$figcaption("Anomalia mensal temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
-            src = "figs/IC072026_anomalia_TSM_202609.png"))
-      ,
-    
+            src = "figs/IC072026_anomalia_TSM_202609.png")),
     br(),              
-    
     div(
   class = "map-var-main",
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia mensal \n Precipitação (mm/mês) Setembro/2026"),
+    tags$figcaption("Anomalia  precipitação (mm/mês) Setembro/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_prec_mmmes202609.png"
@@ -182,7 +173,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia Percentual \n precipitação (%) Setembro/2026"),
+    tags$figcaption("Anomalia percentual \n precipitação (%) Setembro/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_prec__202609.png"
@@ -190,7 +181,7 @@ ui <- page_fluid(
   
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia mensal \n Temperatura do ar (°C) Setembro/2026 "),
+    tags$figcaption("Anomalia  temperatura do ar (°C) Setembro/2026 "),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_T2m_C202609.png"
@@ -201,14 +192,14 @@ ui <- page_fluid(
 # Dados sazonais            
 
     div(class = "mapa-box-main",
-      h3("Previsão Sazonal BESM - SON/2026"),
+      h3("Previsão Trimestral BESM - SON/2026"),
         div(class = "bloco-mapas",     
   div(
   class = "mapas-sec",
 
   tags$figure(
     class = "figura-sec-tsm",
-    tags$figcaption("Anomalia sazonal Temperatura da Superfície do Mar (°C)(***)"),
+    tags$figcaption("Anomalia temperatura da superfície do mar (°C)(***)"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_TSM_202609.png"
@@ -217,7 +208,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "figura-sec",
-    tags$figcaption("Anomalia mensal Precipitação (mm) SON/2026"),
+    tags$figcaption("Anomalia precipitação (mm/mês) SON/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomprec_mediaSON2026.png"
@@ -226,7 +217,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "figura-sec",
-    tags$figcaption("Anomalia percentual Precipitação (%) SON/2026"),
+    tags$figcaption("Anomalia percentual precipitação (%) SON/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomprec___SON2026.png"
@@ -235,7 +226,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "figura-sec",
-    tags$figcaption("Anomalia mensal Temp. do ar (°C) SON/2026"),
+    tags$figcaption("Anomalia temperatura do ar (°C) SON/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_T2m_C_SON2026.png"
@@ -253,7 +244,7 @@ ui <- page_fluid(
       #div( class = "map-tsm-main",
         tags$figure(
         class = "fig-tsm-main",    
-          tags$figcaption("Anomalia mensal Temperatura da Superfície do Mar (°C)"),
+          tags$figcaption("Anomalia mensal temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
             src = "figs/IC072026_anomalia_TSM_202610.png")),
@@ -264,7 +255,7 @@ ui <- page_fluid(
   class = "map-var-main",
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia mensal \n Precipitação (mm/mês) Outubro/2026"),
+    tags$figcaption("Anomalia  precipitação (mm/mês) Outubro/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_prec_mmmes202610.png"
@@ -272,7 +263,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia Percentual \n precipitação (%) Outubro/2026"),
+    tags$figcaption("Anomalia percentual \n precipitação (%) Outubro/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_prec__202610.png"
@@ -280,7 +271,7 @@ ui <- page_fluid(
   
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia mensal \n Temperatura do ar (°C) Outubro/2026 "),
+    tags$figcaption("Anomalia \n temperatura do ar (°C) Outubro/2026 "),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_T2m_C202610.png"
@@ -291,14 +282,14 @@ ui <- page_fluid(
 # Dados sazonais            
 
     div(class = "mapa-box-main",
-      h3("Previsão Sazonal BESM - OND/2026"),
+      h3("Previsão Trimestral BESM - OND/2026"),
         div(class = "bloco-mapas",     
   div(
   class = "mapas-sec",
 
   tags$figure(
     class = "figura-sec-tsm",
-    tags$figcaption("Anomalia sazonal Temperatura da Superfície do Mar (°C)(***)"),
+    tags$figcaption("Anomalia temperatura da superfície do mar (°C)(***)"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_TSM_202611.png"
@@ -307,7 +298,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "figura-sec",
-    tags$figcaption("Anomalia mensal Precipitação (mm) OND/2026"),
+    tags$figcaption("Anomalia precipitação (mm/mês) OND/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomprec_mediaOND2026.png"
@@ -316,7 +307,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "figura-sec",
-    tags$figcaption("Anomalia percentual Precipitação (%) NDJ/2026"),
+    tags$figcaption("Anomalia percentual precipitação (%) NDJ/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomprec___OND2026.png"
@@ -325,7 +316,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "figura-sec",
-    tags$figcaption("Anomalia mensal Temp. do ar (°C) NDJ/2026"),
+    tags$figcaption("Anomalia temperatura do ar (°C) NDJ/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_T2m_C_OND2026.png"
@@ -341,7 +332,7 @@ ui <- page_fluid(
 
         tags$figure(
         class = "fig-tsm-main",    
-          tags$figcaption("Anomalia mensal Temperatura da Superfície do Mar (°C)"),
+          tags$figcaption("Anomalia temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
             src = "figs/IC072026_anomalia_TSM_202611.png"))
@@ -353,7 +344,7 @@ ui <- page_fluid(
   class = "map-var-main",
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia mensal \n Precipitação (mm/mês) Novembro/2026"),
+    tags$figcaption("Anomalia precipitação (mm/mês) Novembro/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_prec_mmmes202611.png"
@@ -361,7 +352,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia Percentual \n precipitação (%) Novembro/2026"),
+    tags$figcaption("Anomalia percentual \n precipitação (%) Novembro/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_prec__202611.png"
@@ -369,7 +360,7 @@ ui <- page_fluid(
   
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia mensal \n Temperatura do ar (°C) Novembro/2026 "),
+    tags$figcaption("Anomalia temperatura do ar (°C) Novembro/2026 "),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_T2m_C202611.png"
@@ -384,12 +375,10 @@ ui <- page_fluid(
 
         tags$figure(
         class = "fig-tsm-main",    
-          tags$figcaption("Anomalia mensal Temperatura da Superfície do Mar (°C)"),
+          tags$figcaption("Anomalia temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
-            src = "figs/IC072026_anomalia_TSM_202612.png"))
-            
-      ,
+            src = "figs/IC072026_anomalia_TSM_202612.png")),
     
     br(),              
     
@@ -397,7 +386,7 @@ ui <- page_fluid(
   class = "map-var-main",
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia mensal \n Precipitação (mm/mês) Dezembro/2026"),
+    tags$figcaption("Anomalia precipitação (mm/mês) Dezembro/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_prec_mmmes202612.png"
@@ -405,7 +394,7 @@ ui <- page_fluid(
 
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia Percentual \n precipitação (%) Dezembro/2026"),
+    tags$figcaption("Anomalia percentual \n precipitação (%) Dezembro/2026"),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_prec__202612.png"
@@ -413,7 +402,7 @@ ui <- page_fluid(
   
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia mensal \n Temperatura do ar (°C) Dezembro/2026 "),
+    tags$figcaption("Anomalia temperatura do ar (°C) Dezembro/2026 "),
     tags$img(
       class = "img-zoom",
       src = "figs/IC072026_anomalia_T2m_C202612.png"
