@@ -78,19 +78,16 @@ ui <- page_fluid(
     div( class = "mapa-box-main",
       h3("Previsão Mensal BESM - Agosto/2026"),
         div( class = "bloco-mapas",
+          div( class = "mapas-sec",
       # Figura TSM
       tags$figure(
-        class = "fig-tsm-main",    
+        class = "figura-sec-tsm",    
           tags$figcaption("Anomalia temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
             src = "figs/IC072026_anomalia_TSM_202608.png")),
     br(),              
-    
-    div(
-  class = "map-var-main",
-  tags$figure(
-    class = "fig-var-main",
+  tags$figure( class = "figura-sec",
     tags$figcaption("Anomalia \n precipitação (mm/mês) Agosto/2026"),
     tags$img(
       class = "img-zoom",
@@ -98,7 +95,7 @@ ui <- page_fluid(
     )),
 
   tags$figure(
-    class = "fig-var-main",
+    class = "figura-sec",
     tags$figcaption("Anomalia percentual \n precipitação (%) Agosto/2026"),
     tags$img(
       class = "img-zoom",
@@ -106,7 +103,7 @@ ui <- page_fluid(
     )),
   
   tags$figure(
-    class = "fig-var-main",
+    class = "figura-sec",
     tags$figcaption("Anomalia temperatura 2m(°C)  Agosto/2026 "),
     tags$img(
       class = "img-zoom",
