@@ -61,6 +61,19 @@ ui <- page_fluid(
     )
   ),
   br(),
+    div( class = "painel-gif",
+      tags$figure(
+        class = "fig-tsm-gif",    
+          tags$figcaption("Anomalia temperatura da superfície do mar (°C)"),
+          tags$img(
+            class = "img-zoom",
+            src = "figs/sst/sstanim.gif")),
+      tags$figure(
+        class = "fig-tsm-gif",    
+          tags$figcaption("Anomalia temperatura da superfície do mar (°C)"),
+          tags$img(
+            class = "img-zoom",
+            src = "figs/sst/asstanim.gif"))),
 
     div( class = "mapa-box-main",
       h3("Previsão Mensal BESM - Agosto/2026"),
