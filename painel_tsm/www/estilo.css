@@ -664,17 +664,17 @@ figure.figura-sec {
 }
 
 figure.fig-tsm-main {
-    width: calc(1rem + 75vw); 
+    width: calc(1rem + 55vw); 
     height: auto;
     margin-bottom: calc(0.5rem + .1vw);
-    margin-left: calc(0.5rem + .1vw);
+    margin-left: calc(0.5rem + 17.5vw);
 }
 
 .fig-tsm-main figcaption
 {
   font-size: calc(0.5rem + .04vw);
-  margin-bottom: -3%;
-  margin-top: -1%;
+  margin-bottom: -1%;
+  margin-top: -0.5%;
 }
 
 .fig-var-main figcaption
@@ -687,8 +687,8 @@ figure.fig-tsm-main {
 .fig-var-main {
   align-items: center;
   margin-left: 1.5vw;
-  margin-top: 13vw;
-  width: 20%;
+  margin-top: 5vw;
+  width: 15%;
 }
 
 .fig-var-main img{
@@ -699,22 +699,23 @@ img.img-zoom {
     height: auto;
 }
 
-figure.figura-sec-tsm {
-    width: 50%; 
-    height: auto;
-    margin-bottom: 1vw;
-}
 .figura-sec,
 .figura-sec-tsm
 {  
   margin-bottom: 1vw;
 }
 
+figure.figura-sec-tsm {
+    width: 50%; 
+    height: auto;
+    margin-top: -2.5vw;
+}
+
 .figura-sec-tsm figcaption
 {
-  font-size: calc(0.2rem + .1vw);
-  margin-bottom: calc(0.2rem - 7.1vw);
-  margin-top: 1vw;
+  font-size: calc(0.2rem + .55vw);
+  margin-bottom: calc(0.2rem - 1.75vw);
+  margin-top: 3.2vw;
 }
 
 figure.figura-sec {
@@ -723,7 +724,7 @@ figure.figura-sec {
 
 }
 .figura-sec figcaption{
-  font-size: calc(0.15rem + .1vw);
+  font-size: calc(0.15rem + .55vw);
   width: 100%;
   margin-bottom: 1vw;
 }
