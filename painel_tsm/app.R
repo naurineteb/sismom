@@ -64,13 +64,11 @@ ui <- page_fluid(
     div( class = "painel-gif",
       tags$figure(
         class = "fig-tsm-gif",    
-          tags$figcaption("Anomalia temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
             src = "figs/sst/sstanim.gif")),
       tags$figure(
         class = "fig-tsm-gif",    
-          tags$figcaption("Anomalia temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
             src = "figs/sst/asstanim.gif"))),
@@ -85,13 +83,13 @@ ui <- page_fluid(
           tags$figcaption("Anomalia temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
-            src = "figs/IC072026_anomalia_TSM_202608.png")),
+            src = "figs/IC072026/tsm/IC072026_aTSM_202608.png")),
     br(),              
   tags$figure( class = "figura-sec",
     tags$figcaption("Anomalia \n precipitação (mm/mês) Agosto/2026"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_prec_mmmes202608.png"
+      src = "figs/IC072026/prec/IC072026_aprec_mmmes_202608.png"
     )),
 
   tags$figure(
@@ -99,7 +97,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia percentual \n precipitação (%) Agosto/2026"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_prec__202608.png"
+      src = "figs/IC072026/prec/IC072026_aprec_porcentagem_202608.png"
     )),
   
   tags$figure(
@@ -107,7 +105,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia temperatura 2m(°C)  Agosto/2026 "),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_T2m_C202608.png"
+      src = "figs/IC072026/t2m/IC072026_aT2m_C202608.png"
     ))
 ))),
   br(),
@@ -122,10 +120,10 @@ ui <- page_fluid(
 
   tags$figure(
     class = "figura-sec-tsm",
-    tags$figcaption("Anomalia temperatura da superfície do mar (°C)(***)"),
+    tags$figcaption("Anomalia temperatura da superfície do mar (°C)"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_TSM_202609.png"
+      src = "figs/IC072026/tsm/IC072026_aTSM_ASO2026.png"
     )
   ),
 
@@ -134,7 +132,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia precipitação (mm/mês)"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomprec_mediaASO2026.png"
+      src = "figs/IC072026/prec/IC072026_aprec_mmmes_202609.png"
     )
   ),
 
@@ -169,7 +167,7 @@ ui <- page_fluid(
           tags$figcaption("Anomalia mensal temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
-            src = "figs/IC072026_anomalia_TSM_202609.png")),
+            src = "figs/IC072026/IC072026_aTSM_202609.png")),
     br(),              
     div(
   class = "map-var-main",
@@ -178,7 +176,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia  precipitação (mm/mês) Setembro/2026"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_prec_mmmes202609.png"
+      src = "figs/IC072026/prec/IC072026_aprec_mmmes_202609.png"
     )),
 
   tags$figure(
@@ -186,7 +184,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia percentual \n precipitação (%) Setembro/2026"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_prec__202609.png"
+      src = "figs/IC072026/prec/IC072026_aprec_porcentagem_202609.png"
     )),
   
   tags$figure(
@@ -212,7 +210,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia temperatura da superfície do mar (°C)(***)"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_TSM_202609.png"
+      src = "figs/IC072026/IC072026_aTSM_SON2026.png"
     )
   ),
 
@@ -257,7 +255,7 @@ ui <- page_fluid(
           tags$figcaption("Anomalia mensal temperatura da superfície do mar (°C)"),
           tags$img(
             class = "img-zoom",
-            src = "figs/IC072026_anomalia_TSM_202610.png")),
+            src = "figs/IC072026/IC072026_aTSM_202610.png")),
     
     br(),              
     
@@ -268,7 +266,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia  precipitação (mm/mês) Outubro/2026"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_prec_mmmes202610.png"
+      src = "figs/IC072026/prec/IC072026_aprec_mmmes_202610.pngg"
     )),
 
   tags$figure(
@@ -276,7 +274,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia percentual \n precipitação (%) Outubro/2026"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_prec__202610.png"
+      src = "figs/IC072026/prec/IC072026_aprec_porcentagem_202610.png"
     )),
   
   tags$figure(
@@ -302,7 +300,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia temperatura da superfície do mar (°C)(***)"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_TSM_202611.png"
+      src = "figs/IC072026/IC072026_aTSM_OND2026.png"
     )
   ),
 
@@ -357,7 +355,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia precipitação (mm/mês) Novembro/2026"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_prec_mmmes202611.png"
+      src = "figs/IC072026/prec/IC072026_aprec_mmmes_202611.png"
     )),
 
   tags$figure(
@@ -365,7 +363,7 @@ ui <- page_fluid(
     tags$figcaption("Anomalia percentual \n precipitação (%) Novembro/2026"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_prec__202611.png"
+      src = "figs/IC072026/prec/IC072026_aprec_porcentagem_202611.png"
     )),
   
   tags$figure(
@@ -399,15 +397,15 @@ ui <- page_fluid(
     tags$figcaption("Anomalia precipitação (mm/mês) Dezembro/2026"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_prec_mmmes202612.png"
+      src = "figs/IC072026/prec/IC072026_aprec_mmmes_202612.png"
     )),
 
   tags$figure(
     class = "fig-var-main",
-    tags$figcaption("Anomalia percentual \n precipitação (%) Dezembro/2026"),
+    tags$figcaption("Anomalia percentual \n precipitação (%)"),
     tags$img(
       class = "img-zoom",
-      src = "figs/IC072026_anomalia_prec__202612.png"
+      src = "figs/IC072026/prec/IC072026_aprec_porcentagem_202612.png"
     )),
   
   tags$figure(
