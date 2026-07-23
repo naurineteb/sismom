@@ -452,7 +452,7 @@ nav_panel(
           class = "card-infografico",
 
           tags$figcaption(
-            "Meta 1 — Monitoramento marítimo e detecção de embarcações"
+            "Monitoramento marítimo e detecção de embarcações - Metas 1 - 2 - 3 - 4"
           ),
 
           tags$img(
@@ -485,7 +485,7 @@ nav_panel(
 
           tags$img(
             class = "img-zoom",
-            src = "figs/infografico_meta4_besm.png",
+            src = "figs/Infografico_Meta4_BESM.png",
             alt = "Resumo integrado da avaliação atmosférica do BESM"
           )
         )

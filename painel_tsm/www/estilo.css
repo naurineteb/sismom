@@ -805,128 +805,129 @@ figure.figura-sec {
 
 /* Teste polywall ====================================================================================================*/
 
-@media (max-width: clamp(800px, 100vw, 1200px)) {
+@media (min-width: 800px) and (max-width: 1200px) {
 
-  .topo{
-  height: 50%;
-  padding: auto;
-  max-height: 50%;
-  margin-bottom: 0;
-
+  .topo {
+    height: 10px;
+    min-height: 0;
+    max-height: 10px;
+    padding: 1vw 2vw;
+    margin-bottom: 0;
   }
-.topo-texto {
-    display: flex;
-    flex-direction: column; /* Isso coloca um embaixo do outro */
-    align-items: flex-start; /* Alinha os textos à esquerda */
-    gap: 1px;            /* Espaço entre os elementos */
-    width: 100%;          /* Aumenta a largura para caber tudo */
-    white-space: nowrap;  /* Impede que o texto quebre dentro dos elementos */
-}
 
-.topo-texto h1, 
-.topo-texto h2, 
-.topo-texto h3 {
-    margin: 1px;            /* Remove as margens que criam espaços verticais */
-    display: flex;      /* Garante que se comportem como texto corrido */
-    font-size: 2.5vw;
+  .topo-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    width: 100%;
+  }
+
+  .topo-texto h1,
+  .topo-texto h2,
+  .topo-texto h3 {
+    margin: 1px;
     padding: 1px;
-}
-  
-  .topo-logo img{
-    width : 10vw;
+    font-size: 2.5vw;
+    line-height: 1.05;
+  }
+
+  .topo-logo img {
+    width: 10vw;
+    max-width: 120px;
     height: auto;
   }
-.card-operacional {
-    min-height: 6vw;    /* O padrão atual é 70px */
-    padding-top: 2vw;    /* O padrão atual é 10px */
-    padding-bottom: 2vw; /* O padrão atual é 10px */
-    height: auto;        /* Garante que a altura se ajuste ao conteúdo */
-    border-radius:3vw;    
-    border-left:1vw solid var(--cor-azul-600);
-}
 
-  .valor-card{
-    font-size: 2vw;
-    align-items: center;
+  .card-operacional {
+    min-height: 6vw;
+    height: auto;
+
+    padding: 2vw 1.5vw;
+
+    border-radius: 3vw;
+    border-left: 1vw solid var(--cor-azul-600);
   }
-  .titulo-card{
+
+  .valor-card {
+    font-size: 2vw;
+  }
+
+  .titulo-card {
     font-size: 2.2vw;
   }
 
-  
-.mapa-box-main h3 {
-    font-size: calc(0.7rem + .3vw);
-}
+  .mapa-box-main h3 {
+    font-size: calc(0.7rem + 0.3vw);
+  }
 
-figure.fig-tsm-main {
-    width: calc(1rem + 55vw); 
+  figure.fig-tsm-main {
+    width: 55vw;
     height: auto;
-    margin-bottom: calc(0.5rem + .1vw);
-    margin-left: calc(0.5rem + 17.5vw);
-}
 
-.fig-tsm-main figcaption
-{
-  font-size: calc(0.5rem + .04vw);
-  margin-bottom: -1%;
-  margin-top: -0.5%;
-}
+    margin: 0 auto calc(0.5rem + 0.1vw);
+  }
 
-.fig-var-main figcaption
-{
-  font-size: calc(0.2rem + .1vw);
-  margin-bottom: 0.2vw;
-  width: 100%;
-}
+  .fig-tsm-main figcaption {
+    font-size: calc(0.5rem + 0.04vw);
+    margin: 0 0 0.2vw;
+  }
 
-.fig-var-main {
-  align-items: center;
-  margin-left: 1.5vw;
-  margin-top: 5vw;
-  width: 15%;
-}
+  .fig-var-main {
+    width: 15%;
+    margin: 1vw 0 0;
+    align-items: center;
+  }
 
-.fig-var-main img{
-  width: 50vw;
-}
-img.img-zoom {
+  .fig-var-main figcaption {
+    width: 100%;
+    font-size: calc(0.3rem + 0.15vw);
+    margin-bottom: 0.2vw;
+  }
+
+  .fig-var-main img {
     width: 100%;
     height: auto;
-}
+  }
 
-.figura-sec,
-.figura-sec-tsm
-{  
-  margin-bottom: 1vw;
-}
-
-figure.figura-sec-tsm {
-    width: 50%; 
+  img.img-zoom {
+    width: 100%;
     height: auto;
-    margin-top: -2.5vw;
-}
+    object-fit: contain;
+  }
 
-.figura-sec-tsm figcaption
-{
-  font-size: calc(0.2rem + .55vw);
-  margin-bottom: calc(0.2rem - 1.75vw);
-  margin-top: 3.2vw;
-}
+  .figura-sec,
+  .figura-sec-tsm {
+    margin-bottom: 1vw;
+  }
 
-figure.figura-sec {
-    width: 17%; 
+  figure.figura-sec-tsm {
+    width: 50%;
     height: auto;
+    margin-top: 0;
+  }
 
-}
-.figura-sec figcaption{
-  font-size: calc(0.15rem + .5vw);
-  width: 100%;
-  margin-bottom: 1vw;
-}
-.titulo-zoom{
-  font-size:calc(0.8rem + .3vw);
+  .figura-sec-tsm figcaption {
+    font-size: calc(0.3rem + 0.5vw);
+    margin: 0 0 0.4vw;
+  }
 
-}
+  figure.figura-sec {
+    width: 17%;
+    height: auto;
+  }
 
-}
+  .figura-sec figcaption {
+    width: 100%;
+    font-size: calc(0.25rem + 0.45vw);
+    margin-bottom: 0.5vw;
+  }
 
+  .titulo-zoom {
+    font-size: calc(0.8rem + 0.3vw);
+  }
+
+  .grade-infograficos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
