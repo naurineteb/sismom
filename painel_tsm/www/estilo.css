@@ -805,7 +805,7 @@ figure.figura-sec {
 
 /* Teste polywall ====================================================================================================*/
 
-@media (min-width: 800px) and (max-width: 1200px) {
+@media (min-width: 400px) and (max-width: 1200px) {
 
   .topo {
     height: 10px;
@@ -926,8 +926,4 @@ figure.figura-sec {
     font-size: calc(0.8rem + 0.3vw);
   }
 
-  .grade-infograficos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
-  }
 }
