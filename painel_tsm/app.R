@@ -72,6 +72,9 @@ nav_panel(
           class = "topo-logo",
           tags$img(
             src = "icons/sismom_ftransp.png"
+          ),
+                    tags$img(
+            src = "icons/inpe.png"
           )
         )
       ),
