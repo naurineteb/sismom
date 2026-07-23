@@ -2,45 +2,79 @@ library(shiny)
 library(bslib)
 library(shinyjs)
 
-ui <- page_fluid(
+ui <- page_navbar(
+
+  title = "SisMOM",
+
   theme = bs_theme(
     version = 5,
     bg = "#F8F4ED",
     fg = "#0F3131",
-    primary = "#16566B",
-    base_font = font_google("Montserrat")
+    primary = "#16566B"
   ),
-  useShinyjs(),
-  tags$head(
-    tags$link(rel = "stylesheet", 
-              type = "text/css", 
-              href = "estilo.css"),
-    tags$script(HTML("$(document).on('click','.img-zoom',  
-                function(){let titulo = $(this)
-                    .closest('figure')
-                    .find('figcaption')
-                    .text();
-    $('#tituloZoom').text(titulo);
-    $('#imgZoom').attr('src',$(this).attr('src'));
-    $('#modalZoom').css('display','flex');});"
-  ))),
-  
-  div( class="page-sazonal",
-    div(class = "topo",
-  
-      div(class = "topo-texto",
+
+  header = tagList(
+    useShinyjs(),
+
+    tags$head(
+      tags$link(
+        rel = "stylesheet",
+        type = "text/css",
+        href = "estilo.css"
+      ),
+
+      tags$script(HTML("
+        $(document).on('click', '.img-zoom', function(event) {
+          event.stopPropagation();
+
+          const figura = $(this).closest('figure');
+          const titulo = figura.find('figcaption').text();
+
+          $('#imgZoom').attr('src', $(this).attr('src'));
+          $('#tituloZoom').text(titulo);
+          $('#modalZoom').css('display', 'flex');
+        });
+
+        $(document).on('click', '#modalZoom, .fechar-zoom', function() {
+          $('#modalZoom').css('display', 'none');
+        });
+
+        $(document).on('click', '#imgZoom, #tituloZoom', function(event) {
+          event.stopPropagation();
+        });
+
+        $(document).on('keydown', function(event) {
+          if (event.key === 'Escape') {
+            $('#modalZoom').css('display', 'none');
+          }
+        });
+      "))
+    )
+  ),
+
+nav_panel(
+    title = "Operacional",
+
+    div(
+      class = "page-sazonal",
+
+      div(
+        class = "topo",
+
+        div(
+          class = "topo-texto",
         h1("Sistema de Monitoramento de Óleo no Mar - SisMOM"),
         h2("Brazilian Earth System Model - BESM"),
         h3("Dashboard Temporário da Sala de Situação")
-      ),
+        ),
 
-      div(class = "topo-logo",
-        tags$img(
-          src = "icons/sismom_ftransp.png"),
-        tags$img(
-          src = "icons/inpe.png")
-      )
-    ),
+        div(
+          class = "topo-logo",
+          tags$img(
+            src = "icons/sismom_ftransp.png"
+          )
+        )
+      ),
 
   br(),
 
@@ -396,9 +430,68 @@ ui <- page_fluid(
       class = "img-zoom",
       src = "figs/IC072026/t2m/IC072026_aT2m_C202612.png"
     ))
-))),
+))))),
   br(),
 
+  nav_panel(
+    title = "Resumo das Metas",
+
+    div(
+      class = "pagina-infograficos",
+
+      div(
+        class = "cabecalho-pagina",
+        h2("Resumo Integrado do SisMOM"),
+        h3("Síntese visual das componentes do programa")
+      ),
+
+      div(
+        class = "grade-infograficos",
+
+        tags$figure(
+          class = "card-infografico",
+
+          tags$figcaption(
+            "Meta 1 — Monitoramento marítimo e detecção de embarcações"
+          ),
+
+          tags$img(
+            class = "img-zoom",
+            src = "figs/SisMOM_Infografico.png",
+            alt = "Resumo integrado da Meta 1 do SisMOM"
+          )
+        ),
+
+                tags$figure(
+          class = "card-infografico",
+
+          tags$figcaption(
+            "Meta 1 — Monitoramento marítimo e detecção de embarcações"
+          ),
+
+          tags$img(
+            class = "img-zoom",
+            src = "figs/meta01.png",
+            alt = "Resumo integrado da Meta 1 do SisMOM"
+          )
+        ),
+
+        tags$figure(
+          class = "card-infografico",
+
+          tags$figcaption(
+            "Meta 4 — Avaliação da componente atmosférica do BESM"
+          ),
+
+          tags$img(
+            class = "img-zoom",
+            src = "figs/infografico_meta4_besm.png",
+            alt = "Resumo integrado da avaliação atmosférica do BESM"
+          )
+        )
+      )
+    )
+  ),
 div(
     id = "modalZoom",
     class = "modal-zoom",
@@ -418,7 +511,7 @@ div(
         id = "imgZoom",
         class = "conteudo-zoom"
     )
-)))
+))
 
 
 server <- function(input, output, session) { }

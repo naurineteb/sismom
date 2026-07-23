@@ -477,8 +477,203 @@ body {
   width: 100%;
 }
 
+.pagina-infograficos {
+  width: 100%;
+  padding: 18px 22px 30px;
+}
 
+.cabecalho-pagina {
+  margin-bottom: 14px;
+}
 
+.cabecalho-pagina h2 {
+  margin: 0;
+  color: var(--cor-azul-800);
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.cabecalho-pagina h3 {
+  margin: 3px 0 0;
+  color: var(--cor-azul-700);
+  font-size: 35px;
+
+}
+
+.grade-infograficos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  width: 100%;
+}
+
+.card-infografico {
+  width: 100%;
+  margin: 0;
+  padding: 12px;
+
+  background: white;
+  border-radius: 15px;
+  border-left: 5px solid var(--cor-azul-600);
+
+  box-shadow: 0 4px 14px rgba(15, 49, 49, 0.12);
+}
+
+.card-infografico figcaption {
+  margin: 0 0 9px;
+  padding: 0 3px;
+
+  color: var(--cor-azul-800);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.card-infografico img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+  cursor: zoom-in;
+
+  border-radius: 8px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card-infografico img:hover {
+  transform: scale(1.005);
+  box-shadow: 0 6px 18px rgba(15, 49, 49, 0.18);
+}
+
+.modal-zoom {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 22px;
+
+  background: rgba(5, 20, 28, 0.94);
+}
+
+.titulo-zoom {
+  max-width: 92vw;
+  margin: 0 0 10px;
+
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.conteudo-zoom {
+  display: block;
+
+  max-width: 96vw;
+  max-height: 88vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  background: white;
+  border-radius: 8px;
+  cursor: zoom-out;
+}
+
+.fechar-zoom {
+  position: fixed;
+  top: 12px;
+  right: 22px;
+  z-index: 100000;
+
+  padding: 0;
+
+  color: white;
+  background: transparent;
+  border: 0;
+
+  font-size: 44px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-zoom {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 22px;
+
+  background: rgba(5, 20, 28, 0.94);
+}
+
+.titulo-zoom {
+  max-width: 92vw;
+  margin: 0 0 10px;
+
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.conteudo-zoom {
+  display: block;
+
+  max-width: 96vw;
+  max-height: 88vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  background: white;
+  border-radius: 8px;
+  cursor: zoom-out;
+}
+
+.fechar-zoom {
+  position: fixed;
+  top: 12px;
+  right: 22px;
+  z-index: 100000;
+
+  padding: 0;
+
+  color: white;
+  background: transparent;
+  border: 0;
+
+  font-size: 44px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.navbar-nav .nav-link{
+
+    font-size:25px;
+
+    font-weight:700;
+}
 
 /* ===================================================================================================================
    12.9. RESPONSIVIDADE 
@@ -724,7 +919,7 @@ figure.figura-sec {
 
 }
 .figura-sec figcaption{
-  font-size: calc(0.15rem + .55vw);
+  font-size: calc(0.15rem + .5vw);
   width: 100%;
   margin-bottom: 1vw;
 }
